@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Абитуриентам - НГУ</title>
+    <!-- Подключение стилей -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #8B0000;
+            --light: #F9F9F9;
+            --dark: #333;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary);
+        }
+        
+        a {
+            color: var(--primary);
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+        }
+        
+        section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            margin-top: 1rem;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline {
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: #ddd;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            padding-right: calc(50% + 3rem);
+        }
+        
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 3rem);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            background: var(--white);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .navbar-nav {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.75rem 1rem;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                flex: 1 0 33%;
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav .nav-item {
+                flex: 1 0 50%;
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 4rem;
+                padding-right: 0;
+            }
+            .timeline-icon {
+                left: 20px;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-nav .nav-item {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка страницы -->
+    <header class="bg-primary text-white">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-xl">
+                <a class="navbar-brand d-flex align-items-center" href="/">
+                    <img src="https://nsu.kg/wp-content/uploads/2020/05/cropped-nsu-logo-2.png" 
+                         alt="НГУ" class="me-2" style="max-height: 60px;">
+                    <span class="fw-bold text-uppercase text-white">
+                        НГУ
+                        <small class="d-block fw-normal" style="color: #fff;">Нарынский Государственный Университет</small>
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Образование</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Наука</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Студентам</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Абитуриентам</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold">Стань частью НГУ</h1>
+            <p class="lead">Все необходимое для поступления в одном месте</p>
+        </div>
+    </header>
+
+    <!-- Важные даты -->
+    <section id="dates" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Важные даты</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title text-primary">Начало приема документов</h5>
+                            <p class="text-secondary flex-grow-1">
+                                1 июня 2024 года<br>
+                                Начало приема документов на все направления подготовки
+                            </p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#documentModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <i class="fas fa-pencil-alt fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title text-primary">Вступительные испытания</h5>
+                            <p class="text-secondary flex-grow-1">1-10 августа 2024 года</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#examModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <i class="fas fa-check-circle fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title text-primary">Зачисление студентов</h5>
+                            <p class="text-secondary flex-grow-1">15-30 августа 2024 года</p>
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#enrollmentModal">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно Подача документов -->
+    <div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="documentModalLabel">Подача документов</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-primary">Способы подачи:</h6>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Лично в приемной комиссии
+                            <span class="badge bg-success rounded-pill"><i class="fas fa-check-circle"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Через онлайн-портал
+                            <span class="badge bg-success rounded-pill"><i class="fas fa-check-circle"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Почтовым отправлением
+                            <span class="badge bg-success rounded-pill"><i class="fas fa-check-circle"></i></span>
+                        </li>
+                    </ul>
+                    <h6 class="text-primary">Необходимые документы:</h6>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Документ</th>
+                                <th>Количество копий</th>
+                                <th>Примечания</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Заявление установленного образца</td>
+                                <td>1 оригинал</td>
+                                <td>Заполняется при подаче</td>
+                            </tr>
+                            <tr>
+                                <td>Документ об образовании</td>
+                                <td>1 оригинал + 2 копии</td>
+                                <td>Аттестат/диплом</td>
+                            </tr>
+                            <tr>
+                                <td>Медицинская справка</td>
+                                <td>1 оригинал</td>
+                                <td>Форма 086-У</td>
+                            </tr>
+                            <tr>
+                                <td>Фотографии 3x4</td>
+                                <td>4 шт.</td>
+                                <td>Цветные, матовые</td>
+                            </tr>
+                            <tr>
+                                <td>Паспорт</td>
+                                <td>1 копия</td>
+                                <td>Первая страница</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h6 class="text-primary">Требования к документам:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Все документы должны быть актуальными</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Копии заверяются нотариально или в приемной комиссии</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Документы принимаются только в полном комплекте</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <a href="#" class="btn btn-primary">Перейти к подаче</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно Вступительные испытания -->
+    <div class="modal fade" id="examModal" tabindex="-1" aria-labelledby="examModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="examModalLabel">Вступительные испытания</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-primary">Формат испытаний:</h6>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">Тестирование по общеобразовательным предметам</li>
+                        <li class="list-group-item">Собеседование (для некоторых направлений)</li>
+                        <li class="list-group-item">Проверка результатов ОРТ</li>
+                    </ul>
+                    <h6 class="text-primary">Расписание:</h6>
+                    <p>1-10 августа 2024 года. Точное время и место будут сообщены после подачи документов.</p>
+                    <h6 class="text-primary">Подготовка:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Ознакомьтесь с перечнем предметов</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Пройдите пробное тестирование</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <a href="#" class="btn btn-primary">Регистрация на испытания</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно Зачисление -->
+    <div class="modal fade" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="enrollmentModalLabel">Зачисление</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="text-primary">Этапы зачисления:</h6>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">Публикация списков поступивших: 15 августа 2024</li>
+                        <li class="list-group-item">Подтверждение зачисления: до 20 августа 2024</li>
+                        <li class="list-group-item">Оформление документов: до 30 августа 2024</li>
+                    </ul>
+                    <h6 class="text-primary">Дополнительно:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Оплата обучения (для контрактников)</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Заселение в общежитие</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <a href="#" class="btn btn-primary">Оформить зачисление</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Этапы поступления -->
+    <section id="process">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Этапы поступления</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">Подача документов</h5>
+                        <p>Соберите необходимый пакет документов и подайте заявление онлайн или лично</p>
+                        <span class="date">1 июня - 25 июля</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">Вступительные испытания</h5>
+                        <p>Пройдите тестирование по выбранному направлению подготовки</p>
+                        <span class="date">1 августа - 10 августа</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">Зачисление</h5>
+                        <p>Оформление документов и зачисление в университет</p>
+                        <span class="date">15-30 августа</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Необходимые документы -->
+    <section id="documents" class="bg-light">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Необходимые документы</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Заявление на поступление
+                            <span class="badge bg-primary rounded-pill">Обязательно</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Документ об образовании
+                            <span class="badge bg-primary rounded-pill">Обязательно</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Медицинская справка
+                            <span class="badge bg-primary rounded-pill">Обязательно</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Фотографии 3x4
+                            <span class="badge bg-secondary rounded-pill">4 шт.</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Копия паспорта
+                            <span class="badge bg-secondary rounded-pill">Обязательно</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Характеристика с места работы/учебы
+                            <span class="badge bg-secondary rounded-pill">По желанию</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Часто задаваемые вопросы</h2>
+            </div>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Как подать документы?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Документы можно подать онлайн через наш портал или лично в приемной комиссии.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Какие экзамены нужно сдавать?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Перечень экзаменов зависит от выбранного направления подготовки.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Есть ли общежитие?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Да, университет предоставляет места в общежитии для иногородних студентов.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-primary text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Контакты</h5>
+                    <p>
+                        Нарын, ул. Ленина<br>
+                        +996 3522 5-08-14<br>
+                        admission@nsu.kg
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Быстрые ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Расписание</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Библиотека</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Приемная комиссия</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Научный журнал</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Подписка</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Ваш email">
+                            <button class="btn btn-light" type="submit">Подписаться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
