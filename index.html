@@ -34,6 +34,7 @@
         
         a:hover {
             color: var(--secondary);
+            text-decoration: none;
         }
         
         section {
@@ -59,6 +60,7 @@
             border: none;
             border-radius: 15px;
             overflow: hidden;
+            height: 100%;
         }
         
         .feature-card:hover {
@@ -115,7 +117,7 @@
         }
 
         .navbar {
-            background: var(--white);
+            background: white;
             border-bottom: 2px solid var(--primary);
         }
 
@@ -251,6 +253,390 @@
             </div>
         </div>
     </section>
+
+    <!-- Факультеты и колледжи -->
+    <section id="faculties" class="bg-white">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Факультеты и колледжи</h2>
+            </div>
+
+            <!-- Карточки -->
+            <div class="row g-4">
+
+                <!-- Колледж иностранных языков -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                            <h4 class="text-primary">Колледж иностранных языков и программирования</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-angle-right me-2"></i>Программирование</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Прикладная информатика</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Переводческое дело</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#langModal">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Аграрно-экономический колледж -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-tractor fa-3x text-primary mb-3"></i>
+                            <h4 class="text-primary">Аграрно-экономический колледж</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-angle-right me-2"></i>Электроэнергетика</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Ветеринария</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Банковское дело</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#agroModal">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Филологический факультет -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-book-open fa-3x text-primary mb-3"></i>
+                            <h4 class="text-primary">Филологический факультет</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-angle-right me-2"></i>Русская филология</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Английский язык</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Китайский язык</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#philModal">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Педагогический факультет -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                            <h4 class="text-primary">Педагогический факультет</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-angle-right me-2"></i>Художественное образование</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Социальная работа</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Физико-математическое образование</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#pedModal">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Факультет экономики -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                            <h4 class="text-primary">Факультет экономики</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-angle-right me-2"></i>Финансы и кредит</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Логистика</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Гражданское право</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#ecoModal">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Аграрно-технический факультет -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card card h-100">
+                        <div class="card-body">
+                            <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
+                            <h4 class="text-primary">Аграрно-технический факультет</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-angle-right me-2"></i>Прикладная информатика</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Биомедицинская инженерия</li>
+                                <li><i class="fas fa-angle-right me-2"></i>Строительство</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#techModal">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальные окна для факультетов -->
+
+    <!-- Модальное окно для Колледжа иностранных языков -->
+    <div class="modal fade" id="langModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Колледж иностранных языков и программирования</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-graduation-cap me-2"></i>Специальности:</h6>
+                            <ul class="list-unstyled">
+                                <li>• <a href="https://nsu.kg/%d0%b0%d0%b3%d1%80%d0%b0%d1%80%d0%b4%d1%8b%d0%ba-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f%d0%bb%d1%8b%d0%ba-%d0%b4%d0%b8%d1%81%d1%86%d0%b8%d0%bf%d0%bb/" target="_blank">230111 Программирование компьютерных систем</a></li>
+                                <li>• <a href="https://nsu.kg/%d0%b0%d0%b3%d1%80%d0%b0%d1%80%d0%b4%d1%8b%d0%ba-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f%d0%bb%d1%8b%d0%ba-%d0%b4%d0%b8%d1%81%d1%86%d0%b8%d0%bf%d0%bb/" target="_blank">230701 Прикладная информатика</a></li>
+                                <li>• <a href="https://nsu.kg/%d0%b0%d0%b3%d1%80%d0%b0%d1%80%d0%b4%d1%8b%d0%ba-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f%d0%bb%d1%8b%d0%ba-%d0%b4%d0%b8%d1%81%d1%86%d0%b8%d0%bf%d0%bb/" target="_blank">050303 Иностранные языки</a></li>
+                                <li>• <a href="https://nsu.kg/%d0%b0%d0%b3%d1%80%d0%b0%d1%80%d0%b4%d1%8b%d0%ba-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f%d0%bb%d1%8b%d0%ba-%d0%b4%d0%b8%d1%81%d1%86%d0%b8%d0%bf%d0%bb/" target="_blank">050720 Переводческое дело</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-users me-2"></i>Контакты:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-user-tie me-2"></i>Директор: Осмонова Бермет</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996701580909">+996701580909</a></li>
+                                <li><i class="fas fa-envelope me-2"></i>Email: <a href="mailto:perlaosmonova@nsu.kg">perlaosmonova@nsu.kg</a></li>
+                                <li><i class="fas fa-user me-2"></i>Зам.директора: Чоробек кызы Айзат</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996708717316">+996708717316</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Аграрного колледжа -->
+    <div class="modal fade" id="agroModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Аграрно-экономический колледж</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-bolt me-2"></i>Технический цикл:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/%d0%bd%d0%b0%d1%82%d0%b5%d0%ba/" target="_blank">Электростанции и сети</a></li>
+                                <li><a href="https://nsu.kg/%d0%bd%d0%b0%d1%82%d0%b5%d0%ba/" target="_blank">Электроснабжение</a></li>
+                                <li><a href="https://nsu.kg/%d0%bd%d0%b0%d1%82%d0%b5%d0%ba/" target="_blank">Техобслуживание ВТ</a></li>
+                            </ul>
+                            
+                            <h6 class="text-primary mt-4"><i class="fas fa-seedling me-2"></i>Сельхоз цикл:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/%d0%bd%d0%b0%d1%82%d0%b5%d0%ba/" target="_blank">Ветеринария</a></li>
+                                <li><a href="https://nsu.kg/%d0%bd%d0%b0%d1%82%d0%b5%d0%ba/" target="_blank">Экология</a></li>
+                                <li><a href="https://nsu.kg/%d0%bd%d0%b0%d1%82%d0%b5%d0%ba/" target="_blank">Переработка продукции</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-phone-alt me-2"></i>Контакты:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-user-tie me-2"></i>Директор: Жаныбек уулу Рысбек</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996706142618">+996706142618</a></li>
+                                <li><i class="fas fa-user me-2"></i>Зам.директора: Наргиз</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996705101690">+996705101690</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="http://nsu.kg/%d0%b1%d0%b8%d0%bb%d0%b8%d0%bc-%d0%b1%d0%b5%d1%80%d2%af%d2%af/%d0%ba%d0%be%d0%bb%d0%bb%d0%b5%d0%b4%d0%b6/%d0%bd%d0%b0%d1%80%d1%8b%d0%bd-%d0%b0%d0%b3%d1%80%d0%b0%d1%80%d0%b4%d1%8b%d0%ba-%d1%8d%d0%ba%d0%be%d0%bd%d0%be%d0%bc%d0%b8%d0%ba%d0%b0%d0%bb%d1%8b%d0%ba-%d0%ba%d0%be%d0%bb%d0%bb%d0%b5%d0%b4%d0%b6/" 
+                           class="btn btn-primary" 
+                           target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>Официальная страница колледжа
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для Филологического факультета -->
+    <div class="modal fade" id="philModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Филологический факультет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-globe-asia me-2"></i>Языковые программы:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/%d0%be%d1%80%d1%83%d1%81-%d1%82%d0%b8%d0%bb%d0%b8-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%b0%d0%b4%d0%b0%d0%b1%d0%b8%d1%8f%d1%82%d1%8b-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80%d0%b0%d1%81%d1%8b-2/" 
+                                      target="_blank">Русский язык и литература</a></li>
+                                <li><a href="https://nsu.kg/%d0%be%d1%80%d1%83%d1%81-%d1%82%d0%b8%d0%bb%d0%b8-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%b0%d0%b4%d0%b0%d0%b1%d0%b8%d1%8f%d1%82%d1%8b-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80%d0%b0%d1%81%d1%8b-2/" 
+                                      target="_blank">Кыргызский язык</a></li>
+                                <li><a href="https://nsu.kg/%d0%be%d1%80%d1%83%d1%81-%d1%82%d0%b8%d0%bb%d0%b8-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%b0%d0%b4%d0%b0%d0%b1%d0%b8%d1%8f%d1%82%d1%8b-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80%d0%b0%d1%81%d1%8b-2/" 
+                                      target="_blank">Китайский язык</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-id-card me-2"></i>Контакты:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-user-tie me-2"></i>Зав.отделом: Бактыгуль</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:0501906000">0501 90-60-00</a></li>
+                                <li><i class="fas fa-envelope me-2"></i>Email: <a href="mailto:amankyzy1976@mail.ru">amankyzy1976@mail.ru</a></li>
+                                <li><i class="fas fa-user me-2"></i>Зав.отделом: Эгимбаева Ж</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996772186594">+996772186594</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="http://nsu.kg/%d0%be%d1%80%d1%83%d1%81-%d1%82%d0%b8%d0%bb%d0%b8-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%b0%d0%b4%d0%b0%d0%b1%d0%b8%d1%8f%d1%82%d1%8b-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80%d0%b0%d1%81%d1%8b-2/" 
+                           class="btn btn-sm btn-outline-primary" 
+                           target="_blank">
+                            Все программы факультета
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Педагогический факультет -->
+    <div class="modal fade" id="pedModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Педагогический факультет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-graduation-cap me-2"></i>Программы:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/%d0%bf%d0%b5%d0%b4%d0%b0%d0%b3%d0%be%d0%b3%d0%b8%d0%ba%d0%b0-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%be%d0%ba%d1%83%d1%82%d1%83%d1%83%d0%bd%d1%83%d0%bd-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8/" target="_blank">550600 Художественное образование</a></li>
+                                <li><a href="https://nsu.kg/%d0%bf%d0%b5%d0%b4%d0%b0%d0%b3%d0%be%d0%b3%d0%b8%d0%ba%d0%b0-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%be%d0%ba%d1%83%d1%82%d1%83%d1%83%d0%bd%d1%83%d0%bd-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8/" target="_blank">550700 Педагогика (начальное/дошкольное)</a></li>
+                                <li><a href="https://nsu.kg/%d0%bf%d0%b5%d0%b4%d0%b0%d0%b3%d0%be%d0%b3%d0%b8%d0%ba%d0%b0-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%be%d0%ba%d1%83%d1%82%d1%83%d1%83%d0%bd%d1%83%d0%bd-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8/" target="_blank">Социальная работа</a></li>
+                                <li><a href="https://nsu.kg/%d0%bf%d0%b5%d0%b4%d0%b0%d0%b3%d0%be%d0%b3%d0%b8%d0%ba%d0%b0-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%be%d0%ba%d1%83%d1%82%d1%83%d1%83%d0%bd%d1%83%d0%bd-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8/" target="_blank">Физико-математическое образование</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-users me-2"></i>Контакты:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-user-tie me-2"></i>Декан: Эсеналиева Гүлжамал</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996701614125">+996701614125</a></li>
+                                <li><i class="fas fa-user me-2"></i>Соц.работа: Бектурова Эмилия</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996705758018">+996705758018</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="http://nsu.kg/%d0%bf%d0%b5%d0%b4%d0%b0%d0%b3%d0%be%d0%b3%d0%b8%d0%ba%d0%b0-%d0%b6%d0%b0%d0%bd%d0%b0-%d0%be%d0%ba%d1%83%d1%82%d1%83%d1%83%d0%bd%d1%83%d0%bd-%d1%82%d0%b5%d1%85%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8/" 
+                           class="btn btn-sm btn-outline-primary" 
+                           target="_blank">
+                            Официальная страница факультета
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Факультет экономики -->
+      <div class="modal fade" id="ecoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Факультет экономики</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-landmark me-2"></i>Основные направления:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/%d1%8d%d0%ba%d0%be%d0%bd%d0%be%d0%bc%d0%b8%d0%ba%d0%b0-%d1%84%d0%b8%d0%bd%d0%b0%d0%bd%d1%81%d1%8b-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d1%83%d1%80%d0%b8%d0%b7%d0%bc-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80/" 
+                                      target="_blank">Экономика (Финансы и кредит)</a></li>
+                                <li><a href="https://nsu.kg/%d1%8d%d0%ba%d0%be%d0%bd%d0%be%d0%bc%d0%b8%d0%ba%d0%b0-%d1%84%d0%b8%d0%bd%d0%b0%d0%bd%d1%81%d1%8b-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d1%83%d1%80%d0%b8%d0%b7%d0%bc-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80/" 
+                                      target="_blank">Бухгалтерский учет</a></li>
+                                <li><a href="https://nsu.kg/%d1%8d%d0%ba%d0%be%d0%bd%d0%be%d0%bc%d0%b8%d0%ba%d0%b0-%d1%84%d0%b8%d0%bd%d0%b0%d0%bd%d1%81%d1%8b-%d0%b6%d0%b0%d0%bd%d0%b0-%d1%82%d1%83%d1%80%d0%b8%d0%b7%d0%bc-%d0%ba%d0%b0%d1%84%d0%b5%d0%b4%d1%80/" 
+                                      target="_blank">Логистика</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-address-book me-2"></i>Контакты:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-user-tie me-2"></i>Декан: Исраилов Эрик</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996701569956">+996701569956</a></li>
+                                <li><i class="fas fa-envelope me-2"></i>Email: <a href="mailto:dekanat_eco@nsu.kg">dekanat_eco@nsu.kg</a></li>
+                                <li><i class="fas fa-map-marker-alt me-2"></i>Ауд. 305, 3 этаж</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="http://nsu.kg/faculty/economics" 
+                           class="btn btn-primary" 
+                           target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>Сайт факультета
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Аграрно-технический факультет -->
+    <div class="modal fade" id="techModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Аграрно-технический факультет</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-cogs me-2"></i>Технические направления:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/agro-tech" target="_blank">Прикладная информатика</a></li>
+                                <li><a href="https://nsu.kg/agro-tech" target="_blank">Электроэнергетика</a></li>
+                                <li><a href="https://nsu.kg/agro-tech" target="_blank">Строительство</a></li>
+                            </ul>
+                            <h6 class="text-primary mt-4"><i class="fas fa-leaf me-2"></i>Аграрные направления:</h6>
+                            <ul>
+                                <li><a href="https://nsu.kg/agro-tech" target="_blank">Экология</a></li>
+                                <li><a href="https://nsu.kg/agro-tech" target="_blank">Агрономия</a></li>
+                                <li><a href="https://nsu.kg/agro-tech" target="_blank">Земельный кадастр</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary"><i class="fas fa-id-card-alt me-2"></i>Контакты:</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-user-tie me-2"></i>Декан: Асыранбекова Мээрэза</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996701264067">+996701264067</a></li>
+                                <li><i class="fas fa-envelope me-2"></i>Email: <a href="mailto:meeraza@nsu.kg">meeraza@nsu.kg</a></li>
+                                <li><i class="fas fa-user-gear me-2"></i>IT-отдел: Бейшеналиева Уулкан</li>
+                                <li><i class="fas fa-phone me-2"></i>Тел: <a href="tel:+996704643282">+996704643282</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="http://nsu.kg/agro-tech" 
+                           class="btn btn-primary" 
+                           target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>Официальный сайт
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Остальные секции (FAQ, Футер и скрипты) -->
+    <!-- ... -->
 
     <!-- Модальное окно Подача документов -->
     <div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
